@@ -1,0 +1,292 @@
+
+body
+{
+	font-family: 'Press Start 2P', cursive;
+	color: #272636;
+	background-image: url(../img/tlo.jpg);
+	background-position: 0px 0px;
+
+	animation: animatedBackground 40s linear infinite;
+	background-size: 10% 20%;
+}
+
+@keyframes animatedBackground 
+{
+	from { background-position: 0 0; }
+	to { background-position: 100% 100%; }
+}
+
+.container 
+{
+	background-color: #919674;
+	border: 4px solid #272636;
+
+	width: 800px;
+	min-height: 500px;
+	margin: auto;
+	position: relative;
+	box-shadow: 10px 10px 5px #303030;
+
+}
+
+.left 
+{
+	width:auto;
+	height: 100%;
+	background-color: #919674;	
+
+	overflow:hidden;
+}
+
+.right 
+{
+
+	height: 100%;
+	float:left;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.stopka
+{
+	border-top: 4px solid #272636;
+	width: 100%;
+	height: 100px;
+	background-color: #919674;	
+	bottom: 0;
+	line-height: 100px;
+}
+
+.stopka span
+{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+
+}
+
+.logo
+{
+	color: #aa00aa;
+	border: 4px solid #272636;
+}
+
+.opis
+{
+
+	padding-top: 0.8em;
+	border: 4px solid #272636;
+	background-color: #D8C5E3;
+	color: #27263;
+	line-height: 0.5em;
+	text-align:center;
+}
+
+ul
+{
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style: none;
+
+}
+
+li
+{
+	background-color: #272636;
+	color:#dee3c5;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+li:hover
+{
+	background-color: white;
+	cursor: pointer;
+}
+
+li a
+{
+	margin: 0px; display: block; width: 100%; height: 100%;
+	text-decoration: none;
+}
+
+li a:hover
+{
+	color: #272636;
+}
+
+a:link, a:visited
+{
+	color: #dee3c5;
+}
+
+.tresc
+{
+	border-top: 4px solid #272636;
+	/*background-color: red;*/
+	text-transform: uppercase;
+	background-color: #dee3c5;
+	padding: 1em;
+}
+
+.img_center
+{
+	margin: auto;
+	display: block;
+}
+
+.subtitle
+{
+	display: block;
+	margin: auto;
+}
+
+.p_1
+{
+	font-style: italic;
+	display: block;
+}
+
+.p_color_1
+{
+	background-color: #846596;
+}
+
+.p_color_2
+{
+	background-color: #78FF00;
+}
+
+.f_color_1
+{
+	color: white;
+}
+
+.p_center
+{
+	text-align: center;
+}
+
+.selected
+{
+
+	color: white !important;
+}
+
+.selected:hover
+{
+    color: black !important;
+}
+
+.order
+{
+  display: table;
+  margin: 0 auto;
+}
+
+#t_plan
+{
+	border-spacing: 0px;
+	border: 1px solid white;
+	border-top: 0px solid white;
+	border-right: 0px solid white;
+}
+
+#t_plan td, #t_plan th
+{
+	padding: 0.5em;
+
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+}
+
+#t_plan th
+{
+	background-color: #D8C5E3
+}
+
+/*tr:nth-child(even) > td, tr:nth-child(even) > th
+{
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+}
+*/
+
+#t_plan col
+{
+	width: 16.66%;
+}
+
+#t_plan col:first-of-type
+{
+    width: 1%;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+.form-style-4 label
+{
+    ;
+}
+.form-style-4 label {
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-4 label > span{
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=email]
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #272636;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+}
+.form-style-4 textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #272636;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style-4 textarea:focus,
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus
+{
+    border-bottom: 1px dashed #272636;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+    background: #dee3c5;
+    color: #272636;
+
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+}
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+background: #272636;
+color: #dee3c5;
+}
+</style>

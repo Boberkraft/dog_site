@@ -1,0 +1,23 @@
+{% set name='ZAMÓWIENIA' %}
+{% set active_page='zamowienia' %}
+
+{% extends "base.html" %}
+{% block content %}
+    <p>Aktualnie przetwarzane zamówienia:</p>
+    <table class="order" id="t_plan">
+        <colgroup>
+			<col>
+			<col>
+        </colgroup>
+        <tr>
+            <th>Imię</th>
+            <th>Zamowienie</th>
+        </tr>
+    {% for order in orders %}
+        <tr>
+            <td>{{ order.name }}</td>
+            <td>{{ order.order }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% set sites = [
+	('/', 'Strona główna'),
+	('/zamow', 'Zamów'),
+	('/zamowienia', 'Zamówienia')]
+%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar pies</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Bahiana|Barrio|Press+Start+2P|VT323" rel="stylesheet">
+	<link rel="icon" href="favicon.ico" type="image/x-icon"> 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+	<meta name="description" content="Tajne projekty od MyStERERA JKK">
+  	<meta name="keywords" content="zsł, memy, układy, programowanie, pyton, cpp, gry i zabawy">
+ 	<meta name="author" content="Bobi, Wojtek">
+ 	<audio id="golec" src="audio/golec.mp3" preload="auto"></audio>
+
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="right">
+			<ul>
+				{% for href, caption in sites %}
+					<li>
+						<a href="{{ href }}"
+						   {% if href == active_page %}
+							class="selected"
+						   {% endif %}>
+							{{ caption }}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="left">
+			<div class="logo">
+				<img class="img_center" onclick="play_audio()" src="img/logo.gif">
+			</div>
+			<div class="opis ">
+				<span>
+					WELCOME IN
+					<p class=" p_1">
+						<a class="selected">((</a>
+							<strong>{{ name }}</strong>
+						<a class="selected">))</a>
+					</p>
+				</span>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<div class="tresc">
+			{% block content %}{% endblock %}
+		</div>
+		<div class="stopka p_center">
+			<span>
+				<a class="p_1">
+					<p class="p_color_1 f_color_1">Wszelkie prawa zastrzeżone</p>
+					<p><strong><a href="mailto:smerf1999@wp.pl">Adam Małysz</a></strong></p></a>
+			</span>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function play_audio()
+	{
+		document.getElementById('golec').play();
+	}	
+</script>
+</html>
+

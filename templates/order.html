@@ -1,0 +1,38 @@
+{% set name='ZAMÓW' %}
+{% set active_page='zamow' %}
+
+{% extends "base.html" %}
+{% block content %}
+    <div class="order">
+    <form class="form-style-4" action="/zamowienia" method="POST">
+        <label for="field1">
+            <p><span>Imię i nazwisko </span></p><input type="text" name="name" required="true" />
+        </label>
+        <label for="field2">
+            <p><span>Email</span></p><input type="email" name="email" required="true" />
+        </label>
+        <label for="field3">
+            <p><span>Telefon</span></p><input type="text" name="phone" required="true" />
+        </label>
+        <label for="field4">
+            <p><span>Zamówienie</span></p><textarea name="order" onkeyup="adjust_textarea(this)" required="true"></textarea>
+        </label>
+        <label>
+            <div class="p_center">
+                <p ><span>&nbsp;</span></p><input class="opis" type="submit" value="Złóż zamówienie" />
+            </div>
+
+        </label>
+    </form>
+    </div>
+
+
+<script type="text/javascript">
+//auto expand textarea
+function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+}
+</script>
+
+{% endblock %}
