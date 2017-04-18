@@ -35,7 +35,7 @@ def add_to_base(form):
     with open('orders', 'a', encoding='utf-8') as ff:
         # wygeneruj wiersz do zapisania
         temp = '{}|X|{}|X|{}|X|{}'.format(name, email, phone, order)
-        ff.write(temp + '\n')
+        ff.write(temp + '\n')  # dopisz do końca pliku
 
 def get_orders():
     """Wczytuje zamówienia z pliku"""
