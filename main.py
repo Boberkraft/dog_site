@@ -14,7 +14,7 @@ def order():
 @app.route('/zamowienia', methods=['POST', 'GET'])
 def orders():
     if request.form:
-        #  ktoś przysłał formularz. Pewnie to są zamówienia
+        #  ktoś przysłał formularz. Pewnie złożył zamówienie
         add_to_base(request.form)  # zapisz w pliku
 
     orders = get_orders()  # odczytaj zamówienia z pliku
